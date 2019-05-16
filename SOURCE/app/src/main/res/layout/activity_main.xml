@@ -3,44 +3,86 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
         android:id="@+id/tb_main"
-        android:background="@color/colorBackground"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.Toolbar>
-    <LinearLayout
-        android:weightSum="10"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"></android.support.v7.widget.Toolbar>
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/img_avatar" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_weight="7"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="8"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:fontFamily="@font/roboto_black"
+                android:text="Lê Đức Trung"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="+84123456"
+                android:textColor="#000000" />
+
+            <Button
+                android:textSize="12dp"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yellow_round_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Sửa thông tin" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        android:layout_marginHorizontal="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@mipmap/img_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
     </LinearLayout>
 
