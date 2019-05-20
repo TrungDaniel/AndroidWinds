@@ -20,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
     private void init() {
         edtPhoneNumber = (EditText) findViewById(R.id.edt_phone_number);
         RelativeLayout rlLogin = (RelativeLayout) findViewById(R.id.rl_login_button);
@@ -29,9 +30,16 @@ public class LoginActivity extends AppCompatActivity {
         rlLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String SoDienThoai= edtPhoneNumber.getText().toString();
                 if (checkvalid()) {
+                    User user = new User();
+                    user.setUsername("Trung Daniel");
+                    user.setPhoneNumber("0387786767");
+                    user.setProfileUrl("https://c.tribune.com.pk/2018/10/1830234-emmadirfani-1540029568.png");
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("user",user);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(LoginActivity.this, "Vui lòng kiểm tra lại số điện thoại", Toast.LENGTH_SHORT).show();
                 }

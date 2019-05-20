@@ -1,6 +1,8 @@
 package com.example.trung.androidwinds;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     int id;
     String username,phoneNumber,profileUrl;
 
