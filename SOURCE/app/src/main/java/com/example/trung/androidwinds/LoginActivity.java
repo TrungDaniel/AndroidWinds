@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                     user.setPhoneNumber(SoDienThoai);
                     user.setProfileUrl("https://c.tribune.com.pk/2018/10/1830234-emmadirfani-1540029568.png");
                     //------
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, AccountActivity.class);
                     intent.putExtra("user", user);
                     startActivity(intent);
                     finish();

@@ -1,6 +1,5 @@
 package com.example.trung.androidwinds;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,7 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class AccountActivity extends AppCompatActivity {
     Toolbar tbMain;
     TextView soDienThoai, tenNguoiDung;
     CircleImageView urlNguoiDung;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_account);
         init();
         getData();
         dangxuat();
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         lnDangXuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "dang xuat", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AccountActivity.this, "dang xuat", Toast.LENGTH_SHORT).show();
             }
         });
 
