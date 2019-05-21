@@ -1,0 +1,440 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Xin chào,"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Username"
+                    android:textColor="#FF0000" />
+
+                <TextView
+                    android:id="@+id/tv_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="(0123456789)"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/card_round_bg"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="11dp"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Điểm tích luỹ"
+                        android:textColor="#000"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="end"
+                        android:text="3000"
+                        android:textColor="#FF0000"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:src="@mipmap/img_money" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="#56000000">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@mipmap/img_tich_diem" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@mipmap/img_dung_diem" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@mipmap/img_tien_ich" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="0.8"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Tích điểm"
+                        android:textColor="#000"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Dùng điểm"
+                        android:textColor="#000"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Tiện ích"
+                        android:textColor="#000"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@mipmap/img_hoi_dap" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@mipmap/img_dat_hang" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleX="0.9"
+                        android:scaleY="0.9"
+                        android:src="@mipmap/img_bao_gia" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.7"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Hỏi đáp"
+                        android:textColor="#000"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Đặt hàng"
+                        android:textColor="#000"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="Báo giá"
+                        android:textColor="#000"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Tin Tức"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="310dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/border_round_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/img_ong_nuoc" />
+
+                    <TextView
+                        android:id="@+id/tv_noidung_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Khuyến mãi\nlên tới 50%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/tv_noidung_1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/white_round_bg"
+                        android:drawableRight="@mipmap/ic_smart_next"
+                        android:gravity="center"
+                        android:paddingRight="15dp"
+                        android:text="Chi tiết"
+                        android:textColor="#9F000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="310dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/border_round_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/img_dieu_cay" />
+
+                    <TextView
+                        android:id="@+id/tv_noidung_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Hút thuốc Lào\nbao phê"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/tv_noidung_2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/white_round_bg"
+                        android:drawableRight="@mipmap/ic_smart_next"
+                        android:gravity="center"
+                        android:paddingRight="15dp"
+                        android:text="Chi tiết"
+                        android:textColor="#9F000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="310dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_round_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/img_la_can_sa" />
+
+                    <TextView
+                        android:id="@+id/tv_noidung_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Hút cần sa\nvươn tới sự phê pha"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/tv_noidung_4"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/white_round_bg"
+                        android:drawableRight="@mipmap/ic_smart_next"
+                        android:gravity="center"
+                        android:paddingRight="15dp"
+                        android:text="Chi tiết"
+                        android:textColor="#9F000000" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Khuyến Mãi"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border_round_bg">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/img_hut_can" />
+
+                <TextView
+                    android:id="@+id/tv_noidung_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Những nguy hại \nkhi hít cần sa"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tv_noidung_3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="90dp"
+                    android:background="@drawable/white_round_bg"
+                    android:drawableRight="@mipmap/ic_smart_next"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:text="Chi tiết"
+                    android:textColor="#9F000000" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

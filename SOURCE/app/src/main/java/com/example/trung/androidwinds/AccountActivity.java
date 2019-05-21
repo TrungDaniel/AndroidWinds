@@ -31,7 +31,6 @@ public class AccountActivity extends AppCompatActivity {
     }
 
 
-
     private void init() {
         tenNguoiDung = findViewById(R.id.tv_user_name);
         tbMain = findViewById(R.id.tb_main);
@@ -58,6 +57,7 @@ public class AccountActivity extends AppCompatActivity {
         Picasso.get().load(user.getProfileUrl()).placeholder(R.mipmap.img_default_avatar).into(urlNguoiDung);
 
     }
+
     private void dangxuat() {
         lnDangXuat.setOnClickListener(new View.OnClickListener() {
             @Override
