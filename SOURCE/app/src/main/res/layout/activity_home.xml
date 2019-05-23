@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
@@ -48,202 +49,225 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="210dp"
                 android:layout_marginHorizontal="15dp"
-                android:background="@drawable/card_round_bg"
                 android:orientation="vertical"
                 android:weightSum="7">
 
-                <LinearLayout
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="11dp"
-                    android:layout_weight="1.5"
-                    android:orientation="horizontal"
-                    android:weightSum="10">
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="8"
-                        android:fontFamily="@font/roboto_bold"
-                        android:text="Điểm tích luỹ"
-                        android:textColor="#000"
-                        android:textSize="19dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical"
+                        android:weightSum="7">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:fontFamily="@font/roboto_bold"
-                        android:gravity="end"
-                        android:text="3000"
-                        android:textColor="#FF0000"
-                        android:textSize="16dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="7dp"
+                            android:layout_weight="1.5"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.8"
-                        android:scaleY="0.8"
-                        android:src="@mipmap/img_money" />
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Điểm tích luỹ"
+                                android:textColor="#000"
+                                android:textSize="19dp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginHorizontal="15dp"
-                    android:background="#56000000">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="end"
+                                android:text="3000"
+                                android:textColor="#FF0000"
+                                android:textSize="16dp" />
 
-                </View>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.8"
+                                android:scaleY="0.8"
+                                android:src="@mipmap/img_money" />
+                        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="2"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="7dp"
+                            android:background="#56000000">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.9"
-                        android:scaleY="0.9"
-                        android:src="@mipmap/img_tich_diem" />
+                        </View>
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.9"
-                        android:scaleY="0.9"
-                        android:src="@mipmap/img_dung_diem" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.9"
-                        android:scaleY="0.9"
-                        android:src="@mipmap/img_tien_ich" />
-                </LinearLayout>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:src="@mipmap/img_tich_diem" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="0.8"
-                    android:weightSum="3">
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:src="@mipmap/img_dung_diem" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="Tích điểm"
-                        android:textColor="#000"
-                        android:textSize="11dp" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:src="@mipmap/img_tien_ich" />
+                        </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="Dùng điểm"
-                        android:textColor="#000"
-                        android:textSize="11dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="0.8"
+                            android:weightSum="3">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="Tiện ích"
-                        android:textColor="#000"
-                        android:textSize="11dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="Tích điểm"
+                                android:textColor="#000"
+                                android:textSize="11dp" />
 
-                </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="Dùng điểm"
+                                android:textColor="#000"
+                                android:textSize="11dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="Tiện ích"
+                                android:textColor="#000"
+                                android:textSize="11dp" />
+
+                        </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="2"
-                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="2"
+                            android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.9"
-                        android:scaleY="0.9"
-                        android:src="@mipmap/img_hoi_dap" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:src="@mipmap/img_hoi_dap" />
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.9"
-                        android:scaleY="0.9"
-                        android:src="@mipmap/img_dat_hang" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:src="@mipmap/img_dat_hang" />
 
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:scaleX="0.9"
-                        android:scaleY="0.9"
-                        android:src="@mipmap/img_bao_gia" />
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9"
+                                android:src="@mipmap/img_bao_gia" />
 
-                </LinearLayout>
+                        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_weight="0.7"
-                    android:weightSum="3">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginBottom="7dp"
+                            android:layout_weight="0.88"
+                            android:weightSum="3">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="Hỏi đáp"
-                        android:textColor="#000"
-                        android:textSize="11dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="Hỏi đáp"
+                                android:textColor="#000"
+                                android:textSize="11dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="Đặt hàng"
-                        android:textColor="#000"
-                        android:textSize="11dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="Đặt hàng"
+                                android:textColor="#000"
+                                android:textSize="11dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="Báo giá"
-                        android:textColor="#000"
-                        android:textSize="11dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:text="Báo giá"
+                                android:textColor="#000"
+                                android:textSize="11dp" />
 
-                </LinearLayout>
+                        </LinearLayout>
 
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
         </LinearLayout>
@@ -252,7 +276,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="17dp"
             android:fontFamily="@font/roboto_bold"
             android:text="Tin Tức"
             android:textColor="#000"
@@ -267,115 +291,117 @@
                 android:layout_height="240dp"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <android.support.v7.widget.CardView
                     android:layout_width="310dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/border_round_bg">
+                    android:layout_marginLeft="17dp"
+                    app:cardCornerRadius="15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="15dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/img_ong_nuoc" />
+                        android:scaleType="center"
+                        android:src="@mipmap/img_tin_tuc_1" />
 
                     <TextView
-                        android:id="@+id/tv_noidung_1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:background="#65554242"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Khuyến mãi\nlên tới 50%"
+                        android:gravity="center"
+                        android:text="Lễ công bố\nHàng Việt Nam chất lượng cao"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
                     <Button
                         android:layout_width="120dp"
                         android:layout_height="30dp"
-                        android:layout_below="@+id/tv_noidung_1"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="90dp"
+                        android:layout_marginTop="190dp"
                         android:background="@drawable/white_round_bg"
                         android:drawableRight="@mipmap/ic_smart_next"
                         android:gravity="center"
                         android:paddingRight="15dp"
                         android:text="Chi tiết"
                         android:textColor="#9F000000" />
-                </RelativeLayout>
 
-                <RelativeLayout
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:layout_width="310dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/border_round_bg">
+                    android:layout_marginLeft="17dp"
+                    app:cardCornerRadius="15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="15dp"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/img_dieu_cay" />
+                        android:src="@mipmap/img_tin_tuc_2" />
 
                     <TextView
-                        android:id="@+id/tv_noidung_2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:background="#65554242"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Hút thuốc Lào\nbao phê"
+                        android:gravity="center"
+                        android:text="Khánh thành xây dựng\nnhà máy chất lượng"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
                     <Button
                         android:layout_width="120dp"
                         android:layout_height="30dp"
-                        android:layout_below="@+id/tv_noidung_2"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="90dp"
+                        android:layout_marginTop="190dp"
                         android:background="@drawable/white_round_bg"
                         android:drawableRight="@mipmap/ic_smart_next"
                         android:gravity="center"
                         android:paddingRight="15dp"
                         android:text="Chi tiết"
                         android:textColor="#9F000000" />
-                </RelativeLayout>
 
-                <RelativeLayout
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:layout_width="310dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/border_round_bg">
+                    android:layout_marginLeft="17dp"
+                    app:cardCornerRadius="15dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="15dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/img_la_can_sa" />
+                        android:scaleType="center"
+                        android:src="@mipmap/img_tin_tuc_1" />
 
                     <TextView
-                        android:id="@+id/tv_noidung_4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:background="#65554242"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Hút cần sa\nvươn tới sự phê pha"
+                        android:gravity="center"
+                        android:text="Lễ công bố\nHàng Việt Nam chất lượng cao"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
                     <Button
                         android:layout_width="120dp"
                         android:layout_height="30dp"
-                        android:layout_below="@+id/tv_noidung_4"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="90dp"
+                        android:layout_marginTop="190dp"
                         android:background="@drawable/white_round_bg"
                         android:drawableRight="@mipmap/ic_smart_next"
                         android:gravity="center"
                         android:paddingRight="15dp"
                         android:text="Chi tiết"
                         android:textColor="#9F000000" />
-                </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
 
             </LinearLayout>
 
@@ -385,95 +411,93 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="5dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginVertical="7dp"
+            android:layout_marginLeft="17dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Khuyến Mãi"
+            android:text="Công trình thực hiện"
             android:textColor="#000"
             android:textSize="18dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
+            <android.support.v7.widget.CardView
+                android:layout_width="310dp"
+                android:layout_height="310dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/border_round_bg">
+                app:cardCornerRadius="15dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/img_hut_can" />
+                    android:src="@mipmap/img_du_an_2" />
 
                 <TextView
-                    android:id="@+id/tv_noidung_5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:background="#65554242"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="Những nguy hại \nkhi hít cần sa"
+                    android:gravity="center"
+                    android:text="Tòa nhà Star City\nLê Văn Lương"
                     android:textColor="#FFFFFF"
                     android:textSize="18dp" />
 
                 <Button
                     android:layout_width="120dp"
                     android:layout_height="30dp"
-                    android:layout_below="@+id/tv_noidung_5"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="90dp"
+                    android:layout_marginTop="260dp"
                     android:background="@drawable/white_round_bg"
                     android:drawableRight="@mipmap/ic_smart_next"
                     android:gravity="center"
                     android:paddingRight="15dp"
                     android:text="Chi tiết"
                     android:textColor="#9F000000" />
-            </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="310dp"
+                android:layout_marginVertical="10dp"
+                android:layout_height="310dp"
+                android:layout_marginLeft="15dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/img_du_an_1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#65554242"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="Chung Mư M5\nNguyễn Trí Thanh"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="260dp"
+                    android:background="@drawable/white_round_bg"
+                    android:drawableRight="@mipmap/ic_smart_next"
+                    android:gravity="center"
+                    android:paddingRight="15dp"
+                    android:text="Chi tiết"
+                    android:textColor="#9F000000" />
+
+
+            </android.support.v7.widget.CardView>
+
 
         </LinearLayout>
-        <RelativeLayout
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/border_round_bg">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/img_1900" />
-
-            <TextView
-                android:id="@+id/tv_noidung_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Quẩy cùng Trung Daniel\ntại 1900"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp" />
-
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="30dp"
-                android:layout_below="@+id/tv_noidung_6"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="90dp"
-                android:background="@drawable/white_round_bg"
-                android:drawableRight="@mipmap/ic_smart_next"
-                android:gravity="center"
-                android:paddingRight="15dp"
-                android:text="Chi tiết"
-                android:textColor="#9F000000" />
-        </RelativeLayout>
     </LinearLayout>
 </ScrollView>
