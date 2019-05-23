@@ -1,18 +1,37 @@
 package com.example.trung.androidwinds;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
     TextView tvUsername, tvPhoneNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         init();
         getData();
+        sendData();
+    }
+
+    private void sendData() {
+        tvUsername.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this,AccountActivity.class);
+                User user = new User();
+                user.setUsername("Trung Daniel");
+                user.setPhoneNumber(tvPhoneNumber.getText().toString());
+                user.setProfileUrl("https://c.tribune.com.pk/2018/10/1830234-emmadirfani-1540029568.png");
+                intent.putExtra("user", user);
+                startActivity(intent);
+
+            }
+        });
     }
 
     private void getData() {

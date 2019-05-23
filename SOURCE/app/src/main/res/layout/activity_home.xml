@@ -400,7 +400,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/border_round_bg">
@@ -413,7 +413,7 @@
                     android:src="@mipmap/img_hut_can" />
 
                 <TextView
-                    android:id="@+id/tv_noidung_3"
+                    android:id="@+id/tv_noidung_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
@@ -425,7 +425,7 @@
                 <Button
                     android:layout_width="120dp"
                     android:layout_height="30dp"
-                    android:layout_below="@+id/tv_noidung_3"
+                    android:layout_below="@+id/tv_noidung_5"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="90dp"
                     android:background="@drawable/white_round_bg"
@@ -435,6 +435,45 @@
                     android:text="Chi tiết"
                     android:textColor="#9F000000" />
             </RelativeLayout>
+
         </LinearLayout>
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/border_round_bg">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/img_1900" />
+
+            <TextView
+                android:id="@+id/tv_noidung_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Quẩy cùng Trung Daniel\ntại 1900"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_noidung_6"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/white_round_bg"
+                android:drawableRight="@mipmap/ic_smart_next"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:text="Chi tiết"
+                android:textColor="#9F000000" />
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>
