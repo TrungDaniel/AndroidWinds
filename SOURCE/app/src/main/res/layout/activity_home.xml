@@ -310,18 +310,19 @@
                     app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/img_news_1"
                         android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/img_default" />
 
                     <TextView
+                        android:id="@+id/tv_new_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#65554242"
+                        android:background="#65332929"
                         android:fontFamily="@font/roboto_regular"
                         android:gravity="center"
-                        android:text="Lễ công bố\nHàng Việt Nam chất lượng cao"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
@@ -347,9 +348,10 @@
                     app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/img_news_2"
                         android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/img_default" />
 
                     <TextView
@@ -358,8 +360,7 @@
                         android:background="#65554242"
                         android:fontFamily="@font/roboto_regular"
                         android:gravity="center"
-                        android:text="Khánh thành xây dựng\nnhà máy chất lượng"
-                        android:textColor="#FFFFFF"
+                        android:id="@+id/tv_new_2"                        android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
                     <Button
@@ -384,9 +385,10 @@
                     app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/img_news_3"
                         android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/img_default" />
 
                     <TextView
@@ -395,8 +397,7 @@
                         android:background="#65554242"
                         android:fontFamily="@font/roboto_regular"
                         android:gravity="center"
-                        android:text="Lễ công bố\nHàng Việt Nam chất lượng cao"
-                        android:textColor="#FFFFFF"
+                        android:id="@+id/tv_new_3"                        android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
                     <Button
@@ -446,9 +447,9 @@
                     app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/img_default" />
 
                     <TextView
@@ -483,9 +484,9 @@
                     app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/img_default" />
 
                     <TextView
@@ -520,9 +521,9 @@
                     app:cardCornerRadius="15dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@mipmap/img_default" />
 
                     <TextView
