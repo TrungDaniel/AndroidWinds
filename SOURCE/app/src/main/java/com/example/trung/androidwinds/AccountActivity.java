@@ -17,7 +17,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class AccountActivity extends AppCompatActivity {
     Toolbar tbMain;
     TextView soDienThoai, tenNguoiDung;
-    CircleImageView urlNguoiDung;
+    CircleImageView ciImageUser;
     LinearLayout lnDangXuat;
 
     @Override
@@ -34,7 +34,7 @@ public class AccountActivity extends AppCompatActivity {
     private void init() {
         tenNguoiDung = findViewById(R.id.tv_user_name);
         tbMain = findViewById(R.id.tb_main);
-        urlNguoiDung = findViewById(R.id.img_user_url);
+        ciImageUser = findViewById(R.id.img_user_url);
         soDienThoai = findViewById(R.id.tv_phone_number);
         Button btnSuaThongTin = findViewById(R.id.btn_sua_thong_tin);
         LinearLayout lnLichSuGiaoDich = findViewById(R.id.ln_lich_su_giao_dich);
@@ -51,10 +51,12 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        User user = (User) getIntent().getSerializableExtra("user");
-        tenNguoiDung.setText(user.getUsername());
-        soDienThoai.setText(user.getPhoneNumber());
-        Picasso.get().load(user.getProfileUrl()).placeholder(R.mipmap.img_default_avatar).into(urlNguoiDung);
+        String userName = AppConfig.getNameUser(AccountActivity.this);
+        String phoneNumber = AppConfig.getPhoneNumber(AccountActivity.this);
+        String urlUser = AppConfig.getUrlUser(AccountActivity.this);
+        Picasso.get().load(urlUser).placeholder(R.mipmap.img_default_avatar).into(ciImageUser);
+        tenNguoiDung.setText(userName);
+        soDienThoai.setText(phoneNumber);
 
     }
 

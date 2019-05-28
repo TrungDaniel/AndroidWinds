@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     EditText edtPhoneNumber;
     RelativeLayout rlLogin;
-    String SoDienThoai;
+    String soDienThoai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,22 +36,29 @@ public class LoginActivity extends AppCompatActivity {
         rlLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SoDienThoai = edtPhoneNumber.getText().toString();
+                soDienThoai = edtPhoneNumber.getText().toString();
                 if (checkvalid()) {
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    AppConfig.setPhoneNumber(edtPhoneNumber.getText().toString(), LoginActivity.this);
+                    setProfile();
                     startActivity(intent);
                     finish();
                 } else {
                     Toast.makeText(LoginActivity.this, "Vui lòng kiểm tra lại số điện thoại", Toast.LENGTH_SHORT).show();
                 }
             }
+
+            private void setProfile() {
+                AppConfig.setPhoneNumber(soDienThoai, LoginActivity.this);
+                AppConfig.setNameUser("Trung Daniel",LoginActivity.this);
+                AppConfig.setUrlUser("https://bitly.vn/46l9",LoginActivity.this);
+
+            }
         });
     }
 
     boolean checkvalid() {
         int phonelength = edtPhoneNumber.getText().toString().length();
-        if (phonelength > 9) {
+        if (phonelength == 10 ) {
             return true;
         }
         return false;

@@ -14,9 +14,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         init();
+        getData();
+        thongTin();
         dangxuat();
-        sendData();
-     //   getData();
     }
 
     private void dangxuat() {
@@ -31,16 +31,11 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    private void sendData() {
+    private void thongTin() {
         tvUsername.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, AccountActivity.class);
-                User user = new User();
-                user.setUsername("Trung Daniel");
-                user.setPhoneNumber(tvPhoneNumber.getText().toString());
-                user.setProfileUrl("https://c.tribune.com.pk/2018/10/1830234-emmadirfani-1540029568.png");
-                intent.putExtra("user", user);
                 startActivity(intent);
 
             }
@@ -48,9 +43,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        User user = (User) getIntent().getSerializableExtra("user");
-        tvUsername.setText(user.getUsername());
-        tvPhoneNumber.setText(user.getPhoneNumber());
+        tvUsername.setText(AppConfig.getNameUser(HomeActivity.this));
+        tvPhoneNumber.setText(AppConfig.getPhoneNumber(HomeActivity.this));
     }
 
     private void init() {
