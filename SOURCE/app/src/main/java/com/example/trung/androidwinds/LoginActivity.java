@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     EditText edtPhoneNumber;
     RelativeLayout rlLogin;
+    String SoDienThoai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         rlLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String SoDienThoai = edtPhoneNumber.getText().toString();
+                SoDienThoai = edtPhoneNumber.getText().toString();
                 if (checkvalid()) {
-                    // tạo user
-                    User user = new User();
-                    user.setUsername("Trung Daniel");
-                    user.setPhoneNumber(SoDienThoai);
-                    user.setProfileUrl("https://c.tribune.com.pk/2018/10/1830234-emmadirfani-1540029568.png");
-                    //------
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    intent.putExtra("user", user);
+                    AppConfig.setPhoneNumber(edtPhoneNumber.getText().toString(), LoginActivity.this);
                     startActivity(intent);
                     finish();
                 } else {
@@ -61,4 +56,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         return false;
     }
+
+
 }

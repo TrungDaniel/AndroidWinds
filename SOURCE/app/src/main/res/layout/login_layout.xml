@@ -74,7 +74,7 @@
         android:inputType="number"
         android:paddingLeft="13dp"
         android:singleLine="true"
-        android:text="0387786767" />
+        />
 
     <RelativeLayout
         android:id="@+id/rl_login_button"

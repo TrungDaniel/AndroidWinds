@@ -7,22 +7,35 @@ import android.view.View;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
-    TextView tvUsername, tvPhoneNumber;
+    TextView tvUsername, tvPhoneNumber,tvDangXuat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         init();
-        getData();
+        dangxuat();
         sendData();
+     //   getData();
+    }
+
+    private void dangxuat() {
+        tvDangXuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppConfig.logout(HomeActivity.this);
+                Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void sendData() {
         tvUsername.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this,AccountActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AccountActivity.class);
                 User user = new User();
                 user.setUsername("Trung Daniel");
                 user.setPhoneNumber(tvPhoneNumber.getText().toString());
@@ -43,5 +56,6 @@ public class HomeActivity extends AppCompatActivity {
     private void init() {
         tvUsername = findViewById(R.id.tv_user_name);
         tvPhoneNumber = findViewById(R.id.tv_phone_number);
+        tvDangXuat=findViewById(R.id.tv_dang_xuat);
     }
 }
