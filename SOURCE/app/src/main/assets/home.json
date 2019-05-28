@@ -1,0 +1,80 @@
+{
+    "status": 1,
+    "code": 200,
+    "result": {
+        "customerDetail": {
+            "customerName": "Trường Thăng Nguyễn",
+            "phone": "",
+            "point": 50,
+            "isNeeđUpate": 1
+        },
+        "listNews": [
+            {
+                "newsID": 20,
+                "urlImage": "http://phucha.com/temp/-uploaded-tin-tuc-su%20kien_ong-nhua-dekko-2_cr_420x255.jpg",
+                "type": 3,
+                "title": "Ống nhựa DEKKO vinh dự đón nhận giải thưởng Thương hiệu quốc gia 2018",
+                "content": "Tối ngày 20/12/2018, Hội đồng Thương hiệu Quốc gia, Ban thư ký Thương hiệu Quốc gia phối hợp với Cục Xúc tiến thương mại (Bộ Công Thương) tổ chức Lễ công bố các doanh nghiệp đạt Thương hiệu quốc gia \"Vietnam Value 2018\". Tại buổi lễ này, Công Ty TNHH Thiết bị Điện nước Phúc Hà với thương hiệu ống nhựa DEKKO vinh dự là một trong 97 doanh nghiệp được lựa chọn có sản phẩm đạt Thương hiệu quốc gia năm 2018.",
+                "createDate": "2019-04-24T00:00:00",
+                "createDateStr": "00:00:00  24/04/2019"
+            },
+            {
+                "newsID": 6,
+                "urlImage": "http://phucha.com/temp/-uploaded-tin-tuc_bon-loai-van-ppr-thong-dung_cr_420x255.jpg",
+                "type": 3,
+                "title": "Điểm danh bốn loại van PPR thông dụng nhất của DEKKO",
+                "content": "Ống nhựa DEKKO là thương hiệu hàng đầu tại Việt Nam trong  lĩnh vực sản xuất và cung ứng các sản phẩm vật tư ngành nước. Các sản phẩm được sản xuất trên dây chuyền công nghệ hàng đầu trên Thế Giới do CHLB Đức, CH Áo sản xuất.\n\nTất cả các dòng sản phẩm do DEKKO cung cấp đều phù hợp với các tiêu chuẩn đề ra dành cho ống nhựa cao cấp, Đó là các tiêu chuẩn quốc tế như ISO, DIN, BS, TCVN với chất lượng cao, bền, đẹp.\n\nBên cạnh việc sản xuất các dòng ống nhựa PPR, ống nhựa HDPE, ống nhựa uPVC thì DEKKO còn sản xuất các phụ kiện đi kèm nhằm mang đến một dịch vụ hoàn hảo, chất lượng tốt nhất cho khách hàng.\n\nDưới đây, DEKKO xin điểm danh bốn loại van PPR thông dụng hiện đang được chúng tôi sản xuất và được đông đảo khách hàng tin dùng.",
+                "createDate": "2009-01-01T00:00:00",
+                "createDateStr": "00:00:00  01/01/2009"
+            },
+            {
+                "newsID": 5,
+                "urlImage": "http://phucha.com/temp/-uploaded-tin-tuc_cach-han-ong-ppr_cr_420x255.png",
+                "type": 3,
+                "title": "Hướng dẫn cách hàn ống PPR và cách lắp ống hàn nhiệt PPR",
+                "content": "Khu nghỉ dưỡng Languna Lăng Cô Huế",
+                "createDate": "2009-01-01T00:00:00",
+                "createDateStr": "00:00:00  01/01/2009"
+            }
+        ],
+        "listPromotion": [
+            {
+                "newsID": 16,
+                "urlImage": "http://phucha.com/temp/-uploaded-du-an_AN-vietnam-lang-co-gallery-hotel-exterior-day-1280x670_cr_420x255.jpg",
+                "type": 5,
+                "title": "KHU NGHỈ DƯỠNG LANGUNA LĂNG CÔ HUẾ",
+                "content": "Khu nghỉ dưỡng Languna Lăng Cô Huế",
+                "createDate": "2019-04-11T00:00:00",
+                "createDateStr": "00:00:00  11/04/2019"
+            },
+            {
+                "newsID": 15,
+                "urlImage": "http://phucha.com/temp/-uploaded-congtrinh-dathuchien_ct-plaza_cr_420x255.JPG",
+                "type": 5,
+                "title": "TÒA NHÀ CT PLAZA TÂN SƠN NHẤT",
+                "content": "Dự án chung cư M5 Nguyễn Chí Thanh",
+                "createDate": "2019-04-11T00:00:00",
+                "createDateStr": "00:00:00  11/04/2019"
+            },
+            {
+                "newsID": 12,
+                "urlImage": "http://phucha.com/temp/-uploaded-du-an_chung-cu-91-nguyen-chi-thanh_cr_420x255.png",
+                "type": 5,
+                "title": "DỰ ÁN CHUNG CƯ M5 NGUYỄN CHÍ THANH",
+                "content": "Khuyến mại 50% cho mọi người",
+                "createDate": "2019-04-11T00:00:00",
+                "createDateStr": "00:00:00  11/04/2019"
+            },
+            {
+                "newsID": 7,
+                "urlImage": "http://phucha.com/temp/-uploaded-du-an_image_1402566679_cr_420x255.jpg",
+                "type": 5,
+                "title": "DỰ ÁN TRỤ SỞ BỘ CÔNG AN ĐƯỜNG PHẠM VĂN ĐỒNG - TP. HÀ NỘI",
+                "content": "Ống nhựa chịu nhiệt",
+                "createDate": "2019-04-11T00:00:00",
+                "createDateStr": "00:00:00  11/04/2019"
+            }
+        ]
+    },
+    "message": ""
+}
