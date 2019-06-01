@@ -21,12 +21,34 @@ public class AppConfig {
         editor.apply();
     }
 
+
     public static void setUrlUser(String urlUser, Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("UrlUser", urlUser);
         editor.apply();
     }
+
+    public static void setNgaySinhUser(String ngaySinh, Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("NgaySinh", ngaySinh);
+        editor.apply();
+    }
+    public static void setGioiTinhUser(String gioiTinh, Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("GioiTinh", gioiTinh);
+        editor.apply();
+    }
+    public static void setEmailUser(String email, Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("Email", email);
+        editor.apply();
+    }
+
+    // ------------------------------------------------
 
     public static String getPhoneNumber(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -42,6 +64,21 @@ public class AppConfig {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("UrlUser", null);
     }
+    public static String getNgaySinhUser(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("NgaySinh", "Nam");
+    }
+    public static String getEmailUser(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("Email", "@gmai.com");
+    }
+
+    public static String getGioiTinhUser(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("GioiTinh", "01/01/1990");
+    }
+
+
 
     public static void logout(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);

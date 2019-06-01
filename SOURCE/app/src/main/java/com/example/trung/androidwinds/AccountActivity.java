@@ -1,5 +1,6 @@
 package com.example.trung.androidwinds;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ public class AccountActivity extends AppCompatActivity {
     TextView soDienThoai, tenNguoiDung;
     CircleImageView ciImageUser;
     LinearLayout lnDangXuat;
+    Button btnSuaThongTin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,11 @@ public class AccountActivity extends AppCompatActivity {
         init();
         getData();
         dangxuat();
+        suathongtin();
 
     }
+
+
 
 
     private void init() {
@@ -36,7 +41,7 @@ public class AccountActivity extends AppCompatActivity {
         tbMain = findViewById(R.id.tb_main);
         ciImageUser = findViewById(R.id.img_user_url);
         soDienThoai = findViewById(R.id.tv_phone_number);
-        Button btnSuaThongTin = findViewById(R.id.btn_sua_thong_tin);
+        btnSuaThongTin = findViewById(R.id.btn_sua_thong_tin);
         LinearLayout lnLichSuGiaoDich = findViewById(R.id.ln_lich_su_giao_dich);
         LinearLayout lnHoiDap = findViewById(R.id.ln_hoi_dap);
         LinearLayout lnHuongDanSuDung = findViewById(R.id.ln_huong_dan_su_dung);
@@ -48,6 +53,7 @@ public class AccountActivity extends AppCompatActivity {
         // ---------
         toobar();
 
+
     }
 
     private void getData() {
@@ -58,6 +64,15 @@ public class AccountActivity extends AppCompatActivity {
         tenNguoiDung.setText(userName);
         soDienThoai.setText(phoneNumber);
 
+    }
+    private void suathongtin() {
+        btnSuaThongTin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AccountActivity.this,InfomationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void dangxuat() {

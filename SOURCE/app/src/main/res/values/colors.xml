@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorRed">#f50a1a</color>
     <color name="colorBackground">#fffccc</color>
+    <color name="belowEdittext">#686464</color>
 </resources>
