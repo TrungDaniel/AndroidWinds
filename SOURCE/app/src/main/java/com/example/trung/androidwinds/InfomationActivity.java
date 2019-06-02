@@ -14,13 +14,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class InfomationActivity extends AppCompatActivity {
     Toolbar tbInformation;
     TextView tvNgaySinh;
-    EditText edtTen,edtSoDienThoai,edtEmail;
+    EditText edtTen, edtSoDienThoai, edtEmail;
     ImageButton ibNgaySinh;
     DatePickerDialog.OnDateSetListener mDateSetListener;
     Spinner snGioiTinh;
@@ -37,7 +36,6 @@ public class InfomationActivity extends AppCompatActivity {
         sendData();
 
 
-
     }
 
     private void sendData() {
@@ -47,15 +45,16 @@ public class InfomationActivity extends AppCompatActivity {
                 String ten = edtTen.getText().toString();
                 String soDienThoai = edtSoDienThoai.getText().toString();
                 String ngaySinh = tvNgaySinh.getText().toString();
-                String gioiTinh = snGioiTinh.getSelectedItem().toString();
-                String email = edtTen.getText().toString();
-                AppConfig.setNameUser(ten,InfomationActivity.this);
-                AppConfig.setPhoneNumber(soDienThoai,InfomationActivity.this);
-                AppConfig.setGioiTinhUser(gioiTinh,InfomationActivity.this);
-                AppConfig.setNgaySinhUser(ngaySinh,InfomationActivity.this);
-                AppConfig.setEmailUser(email,InfomationActivity.this);
+                int gioiTinh = snGioiTinh.getSelectedItemPosition();
+                String email = edtEmail.getText().toString();
+                AppConfig.setNameUser(ten, InfomationActivity.this);
+                AppConfig.setPhoneNumber(soDienThoai, InfomationActivity.this);
+                AppConfig.setGioiTinhUser(gioiTinh, InfomationActivity.this);
+                AppConfig.setNgaySinhUser(ngaySinh, InfomationActivity.this);
+                AppConfig.setEmailUser(email, InfomationActivity.this);
+                Toast.makeText(InfomationActivity.this, "Bạn đã cập nhập thành công", Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(InfomationActivity.this, "Cập nhập thành công", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -63,15 +62,26 @@ public class InfomationActivity extends AppCompatActivity {
 
     private void setData() {
         edtTen.setText(AppConfig.getNameUser(InfomationActivity.this));
+        edtTen.setSelection(edtTen.getText().length());
+
         edtSoDienThoai.setText(AppConfig.getPhoneNumber(InfomationActivity.this));
+        edtSoDienThoai.setSelection(edtSoDienThoai.getText().length());
+
+        tvNgaySinh.setText(AppConfig.getNgaySinhUser(InfomationActivity.this));
+
         edtEmail.setText(AppConfig.getEmailUser(InfomationActivity.this));
+        edtEmail.setSelection(edtEmail.getText().length());
+
+        // set position spiner
+        int value = AppConfig.getGioiTinh(InfomationActivity.this);
+        snGioiTinh.setSelection(value);
 
 
     }
 
     private void setGioiTinh() {
-        String[] gioitinh = {"Nam","Nữ","LBGT"};
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,gioitinh);
+        String[] gioitinh = {"Nam", "Nữ", "LBGT"};
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, gioitinh);
         snGioiTinh.setAdapter(arrayAdapter);
 
     }
@@ -92,8 +102,8 @@ public class InfomationActivity extends AppCompatActivity {
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                int thang = month+1;
-               tvNgaySinh.setText(dayOfMonth + "/" + thang +"/"+year);
+                int thang = month + 1;
+                tvNgaySinh.setText(dayOfMonth + "/" + thang + "/" + year);
             }
         };
     }
@@ -101,12 +111,12 @@ public class InfomationActivity extends AppCompatActivity {
 
     private void init() {
         tbInformation = (Toolbar) findViewById(R.id.tb_information);
-        tvNgaySinh=findViewById(R.id.tv_ngay_sinh);
-        edtTen=findViewById(R.id.edt_ten);
-        edtSoDienThoai=findViewById(R.id.edt_so_dien_thoai);
-        edtEmail=findViewById(R.id.edt_email);
+        tvNgaySinh = findViewById(R.id.tv_ngay_sinh);
+        edtTen = findViewById(R.id.edt_ten);
+        edtSoDienThoai = findViewById(R.id.edt_so_dien_thoai);
+        edtEmail = findViewById(R.id.edt_email);
         ibNgaySinh = findViewById(R.id.ib_ngay_sinh);
-        snGioiTinh = findViewById(R.id.sn_gioi_tinh);
+        snGioiTinh = (Spinner) findViewById(R.id.sn_gioi_tinh);
         rlDongyButton = findViewById(R.id.rl_dongy_button);
         setSupportActionBar(tbInformation);
         getSupportActionBar().setDisplayShowTitleEnabled(false);

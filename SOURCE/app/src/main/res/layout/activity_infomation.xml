@@ -1,222 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    android:orientation="vertical">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/tb_information"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Thông Tin Cơ Bản"
-        android:textColor="#000000"
-        android:textSize="23dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="80dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="1dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Tên"
-            android:textColor="#000"
-            android:textSize="16dp" />
-
-        <EditText
-            android:gravity="right"
-            android:id="@+id/edt_ten"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="9"
-            android:backgroundTint="@color/belowEdittext"
-            android:singleLine="true"
-            android:textColor="@color/belowEdittext" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_weight="4"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Số điện thoại"
-            android:textColor="#000"
-            android:textSize="16dp" />
-
-        <EditText
-            android:gravity="right"
-            android:id="@+id/edt_so_dien_thoai"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="6"
-            android:backgroundTint="@color/belowEdittext"
-            android:singleLine="true"
-            android:textColor="@color/belowEdittext" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="3"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Ngày Sinh"
-            android:textColor="#000"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/tv_ngay_sinh"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="6"
-            android:gravity="right"
-            android:text="01/01/1990"
-            android:textSize="17sp" />
-
-        <ImageButton
-            android:id="@+id/ib_ngay_sinh"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@color/colorBackground"
-            android:src="@mipmap/ic_smart_next" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="7"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Giới Tính"
-            android:textColor="#000"
-            android:textSize="16dp" />
-
-        <Spinner
-            android:id="@+id/sn_gioi_tinh"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"></Spinner>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_weight="2"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Email"
-            android:textColor="#000"
-            android:textSize="16dp" />
-
-        <EditText
-            android:gravity="right"
-            android:id="@+id/edt_email"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="8"
-            android:backgroundTint="@color/belowEdittext"
-            android:singleLine="true"
-            android:textColor="@color/belowEdittext" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginHorizontal="30dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-
-        <View
-            android:layout_marginTop="15dp"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_information"
             android:layout_width="match_parent"
-            android:background="@color/belowEdittext"
-            android:layout_height="1dp">
-
-
-        </View>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_marginTop="20dp"
-        android:id="@+id/rl_dongy_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:clickable="true">
+            android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/selector_red_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="ĐỒNG Ý"
-            android:textColor="#fff" />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="35dp"
-            android:layout_marginRight="15dp"
-            android:src="@mipmap/ic_next" />
-
-    </RelativeLayout>
+            android:text="Thông Tin Cơ Bản"
+            android:textColor="#000000"
+            android:textSize="23dp" />
 
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Tên"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/edt_ten"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:backgroundTint="@color/belowEdittext"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/belowEdittext" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="4"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Số điện thoại"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/edt_so_dien_thoai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:backgroundTint="@color/belowEdittext"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/belowEdittext" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Ngày Sinh"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_ngay_sinh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:gravity="right"
+                android:text="01/01/1990"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/ib_ngay_sinh"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/colorBackground"
+                android:src="@mipmap/ic_smart_next" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="7"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Giới Tính"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/sn_gioi_tinh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Email"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:backgroundTint="@color/belowEdittext"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/belowEdittext" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/belowEdittext">
+
+
+            </View>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dongy_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_red_bg"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="ĐỒNG Ý"
+                android:textColor="#fff" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_next" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -35,11 +35,12 @@ public class AppConfig {
         editor.putString("NgaySinh", ngaySinh);
         editor.apply();
     }
-    public static void setGioiTinhUser(String gioiTinh, Context context) {
+    public static int setGioiTinhUser(int gioiTinh, Context context){
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("GioiTinh", gioiTinh);
+        editor.putInt("GioiTinh",gioiTinh);
         editor.apply();
+        return gioiTinh;
     }
     public static void setEmailUser(String email, Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -66,17 +67,18 @@ public class AppConfig {
     }
     public static String getNgaySinhUser(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("NgaySinh", "Nam");
+        return sharedPreferences.getString("NgaySinh", "1/1/1900");
     }
     public static String getEmailUser(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("Email", "@gmai.com");
     }
-
-    public static String getGioiTinhUser(Context context) {
+    public static int getGioiTinh(Context context){
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("GioiTinh", "01/01/1990");
+        return sharedPreferences.getInt("GioiTinh",2);
     }
+
+
 
 
 
