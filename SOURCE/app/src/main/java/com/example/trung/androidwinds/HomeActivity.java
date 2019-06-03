@@ -6,12 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.trung.androidwinds.Model.HomeData;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,70 +32,49 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void docJson() {
-        String homeData = loadJSONFromAsset();
-        try {
-            JSONObject jsonHomeData = new JSONObject(homeData);
-            int status = jsonHomeData.getInt("status");
-            int code = jsonHomeData.getInt("code");
-            String msg = jsonHomeData.getString("message");
-            JSONObject jsonResult = jsonHomeData.getJSONObject("result");
-            JSONObject jsonCustomerDetail = jsonResult.getJSONObject("customerDetail");
-            String customerName = jsonCustomerDetail.getString("customerName");
-            JSONArray jsonArrayNews = jsonResult.getJSONArray("listNews");
-            JSONArray jsonArrayCtth = jsonResult.getJSONArray("listPromotion");
-            // -------------------
-            JSONObject jsonNew1 = jsonArrayNews.getJSONObject(0);
-            JSONObject jsonNew2 = jsonArrayNews.getJSONObject(1);
-            JSONObject jsonNew3 = jsonArrayNews.getJSONObject(2);
+        String strhomeData = loadJSONFromAsset();
+        Gson gson = new Gson();
+        HomeData homeData = gson.fromJson(strhomeData, HomeData.class);
+        //newsTitle
+        String newsTitle1=homeData.getResult().getListNews().get(0).getTitle();
+        String newsTitle2=homeData.getResult().getListNews().get(1).getTitle();
+        String newsTitle3=homeData.getResult().getListNews().get(2).getTitle();
+        //NewsUrl
+        String newsUrl1=homeData.getResult().getListNews().get(0).getUrlImage();
+        String newsUrl2=homeData.getResult().getListNews().get(1).getUrlImage();
+        String newsUrl3=homeData.getResult().getListNews().get(2).getUrlImage();
+        //----------
+        //promotionTitle
+        String promotionTitle1=homeData.getResult().getListPromotion().get(0).getTitle();
+        String promotionTitle2=homeData.getResult().getListPromotion().get(1).getTitle();
+        String promotionTitle3=homeData.getResult().getListPromotion().get(2).getTitle();
+        //promotionUrl
+        String promotionUrl1=homeData.getResult().getListPromotion().get(0).getUrlImage();
+        String promotionUrl2=homeData.getResult().getListPromotion().get(1).getUrlImage();
+        String promotionUrl3=homeData.getResult().getListPromotion().get(2).getUrlImage();
+        // setdata
+        Picasso.get().load(newsUrl1).placeholder(R.mipmap.img_default).into(imgNews1);
+        Picasso.get().load(newsUrl2).placeholder(R.mipmap.img_default).into(imgNews2);
+        Picasso.get().load(newsUrl3).placeholder(R.mipmap.img_default).into(imgNews3);
 
-            //
-            String newsTitle1 = jsonNew1.getString("title");
-            String urlNew1 = jsonNew1.getString("urlImage");
-
-            String newsTitle2 = jsonNew2.getString("title");
-            String urlNew2 = jsonNew2.getString("urlImage");
-
-            String newsTitle3 = jsonNew3.getString("title");
-            String urlNew3 = jsonNew3.getString("urlImage");
-            //
-
-            JSONObject jsonCtth1 = jsonArrayCtth.getJSONObject(0);
-            JSONObject jsonCtth2 = jsonArrayCtth.getJSONObject(1);
-            JSONObject jsonCtth3 = jsonArrayCtth.getJSONObject(2);
-
-            String ctthTitle1 = jsonCtth1.getString("title");
-            String urlCtth1 = jsonCtth1.getString("urlImage");
-
-            String ctthTitle2 = jsonCtth2.getString("title");
-            String urlCtth2 = jsonCtth2.getString("urlImage");
-
-            String ctthTitle3 = jsonCtth3.getString("title");
-            String urlCtth3 = jsonCtth3.getString("urlImage");
-
-            //
-            Picasso.get().load(urlNew1).placeholder(R.mipmap.img_default).into(imgNews1);
-            Picasso.get().load(urlNew2).placeholder(R.mipmap.img_default).into(imgNews2);
-            Picasso.get().load(urlNew3).placeholder(R.mipmap.img_default).into(imgNews3);
-
-            Picasso.get().load(urlCtth1).placeholder(R.mipmap.img_default).into(imgCtth1);
-            Picasso.get().load(urlCtth2).placeholder(R.mipmap.img_default).into(imgCtth2);
-            Picasso.get().load(urlCtth3).placeholder(R.mipmap.img_default).into(imgCtth3);
+        Picasso.get().load(promotionUrl1).placeholder(R.mipmap.img_default).into(imgCtth1);
+        Picasso.get().load(promotionUrl2).placeholder(R.mipmap.img_default).into(imgCtth2);
+        Picasso.get().load(promotionUrl3).placeholder(R.mipmap.img_default).into(imgCtth3);
 
 
 
-            tvNews1.setText(newsTitle1);
-            tvNews2.setText(newsTitle2);
-            tvNews3.setText(newsTitle3);
+        tvNews1.setText(newsTitle1);
+        tvNews2.setText(newsTitle2);
+        tvNews3.setText(newsTitle3);
 
-            tvCtth1.setText(ctthTitle1);
-            tvCtth2.setText(ctthTitle2);
-            tvCtth3.setText(ctthTitle3);
+        tvCtth1.setText(promotionTitle1);
+        tvCtth2.setText(promotionTitle2);
+        tvCtth3.setText(promotionTitle3);
 
 
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
+
 
 
     }
@@ -117,6 +95,7 @@ public class HomeActivity extends AppCompatActivity {
         }
         return str;
     }
+
 
     private void dangxuat() {
         tvDangXuat.setOnClickListener(new View.OnClickListener() {
