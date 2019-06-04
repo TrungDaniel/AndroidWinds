@@ -1,11 +1,15 @@
-package com.example.trung.androidwinds;
+package com.example.trung.androidwinds.Controller.Auth;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
+
+import com.example.trung.androidwinds.Utils.AppConfig;
+import com.example.trung.androidwinds.Controller.Main.HomeActivity;
+import com.example.trung.androidwinds.R;
+import com.example.trung.androidwinds.Model.User;
 
 public class SplashActivity extends AppCompatActivity {
     ProgressBar progressBar;

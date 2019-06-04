@@ -1,4 +1,4 @@
-package com.example.trung.androidwinds;
+package com.example.trung.androidwinds.Controller.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.trung.androidwinds.R;
+import com.example.trung.androidwinds.Utils.AppConfig;
 import com.kofigyan.stateprogressbar.StateProgressBar;
 import com.squareup.picasso.Picasso;
 
@@ -69,7 +71,7 @@ public class AccountActivity extends AppCompatActivity {
         btnSuaThongTin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountActivity.this,InfomationActivity.class);
+                Intent intent = new Intent(AccountActivity.this, InfomationActivity.class);
                 startActivity(intent);
             }
         });

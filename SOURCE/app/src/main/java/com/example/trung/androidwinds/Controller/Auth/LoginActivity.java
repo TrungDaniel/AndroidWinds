@@ -1,4 +1,4 @@
-package com.example.trung.androidwinds;
+package com.example.trung.androidwinds.Controller.Auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.example.trung.androidwinds.Utils.AppConfig;
+import com.example.trung.androidwinds.Controller.Main.HomeActivity;
+import com.example.trung.androidwinds.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtPhoneNumber;

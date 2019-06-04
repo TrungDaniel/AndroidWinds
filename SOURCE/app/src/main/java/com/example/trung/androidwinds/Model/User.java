@@ -1,4 +1,4 @@
-package com.example.trung.androidwinds;
+package com.example.trung.androidwinds.Model;
 
 import java.io.Serializable;
 

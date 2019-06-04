@@ -1,4 +1,4 @@
-package com.example.trung.androidwinds;
+package com.example.trung.androidwinds.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

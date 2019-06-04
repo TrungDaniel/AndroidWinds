@@ -12,21 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".InfomationActivity"
-            android:parentActivityName=".AccountActivity">
+            android:name=".Controller.Main.InfomationActivity"
+            android:parentActivityName=".Controller.Main.AccountActivity">
 
         </activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".Controller.Auth.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".Controller.Main.HomeActivity" />
         <activity
-            android:name=".AccountActivity"
-            android:parentActivityName=".HomeActivity" />
-        <activity android:name=".LoginActivity"></activity>
+            android:name=".Controller.Main.AccountActivity"
+            android:parentActivityName=".Controller.Main.HomeActivity" />
+        <activity android:name=".Controller.Auth.LoginActivity"></activity>
     </application>
 
 </manifest>

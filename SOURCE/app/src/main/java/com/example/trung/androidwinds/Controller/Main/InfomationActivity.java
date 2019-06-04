@@ -1,4 +1,4 @@
-package com.example.trung.androidwinds;
+package com.example.trung.androidwinds.Controller.Main;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.trung.androidwinds.Utils.AppConfig;
+import com.example.trung.androidwinds.R;
 
 import java.util.Calendar;
 
