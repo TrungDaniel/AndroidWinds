@@ -79,9 +79,6 @@ public class AppConfig {
     }
 
 
-
-
-
     public static void logout(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         sharedPreferences.edit().remove("PhoneNumber").commit();

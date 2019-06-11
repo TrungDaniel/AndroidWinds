@@ -30,8 +30,6 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     void sceenRouter() {
-
-
         String phoneNumber = AppConfig.getPhoneNumber(this);
         if (phoneNumber == null) {
             Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
@@ -39,10 +37,6 @@ public class SplashActivity extends AppCompatActivity {
             finish();
         } else {
             Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
-            User user = new User();
-            user.setUsername("Trung Daniel");
-            user.setPhoneNumber("0387786767");
-            user.setProfileUrl("https://c.tribune.com.pk/2018/10/1830234-emmadirfani-1540029568.png");
             startActivity(intent);
             finish();
         }

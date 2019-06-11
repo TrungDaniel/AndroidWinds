@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.trung.androidwinds.Utils.AppConfig;
 import com.example.trung.androidwinds.Controller.Main.HomeActivity;
 import com.example.trung.androidwinds.R;
+import com.example.trung.androidwinds.Utils.AppConfig;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtPhoneNumber;
@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.login_layout);
         init();
         dangNhap();
-
     }
 
     private void init() {
@@ -32,8 +31,6 @@ public class LoginActivity extends AppCompatActivity {
         rlLogin = findViewById(R.id.rl_login_button);
         ImageView imgGoogle = findViewById(R.id.img_google_login);
         ImageView imgFacebook = findViewById(R.id.img_facebook_login);
-
-
     }
 
     private void dangNhap() {
@@ -53,8 +50,8 @@ public class LoginActivity extends AppCompatActivity {
 
             private void setProfile() {
                 AppConfig.setPhoneNumber(soDienThoai, LoginActivity.this);
-                AppConfig.setNameUser("Trung Daniel",LoginActivity.this);
-                AppConfig.setUrlUser("https://bitly.vn/46l9",LoginActivity.this);
+                AppConfig.setNameUser("Trung Daniel", LoginActivity.this);
+                AppConfig.setUrlUser("https://bitly.vn/46l9", LoginActivity.this);
 
             }
         });
@@ -62,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
 
     boolean checkvalid() {
         int phonelength = edtPhoneNumber.getText().toString().length();
-        if (phonelength == 10 ) {
+        if (phonelength == 10) {
             return true;
         }
         return false;

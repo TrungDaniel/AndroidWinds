@@ -48,12 +48,12 @@ public class AccountActivity extends AppCompatActivity {
         LinearLayout lnHoiDap = findViewById(R.id.ln_hoi_dap);
         LinearLayout lnHuongDanSuDung = findViewById(R.id.ln_huong_dan_su_dung);
         lnDangXuat = findViewById(R.id.ln_dangxuat);
+        toobar();
         // State peogressBar
         String[] descriptionData = {"Thành viên", "Bạc", "Vàng", "Bạch kim"};
         StateProgressBar stateProgressBar = (StateProgressBar) findViewById(R.id.your_state_progress_bar_id);
         stateProgressBar.setStateDescriptionData(descriptionData);
-        // ---------
-        toobar();
+
 
 
     }
