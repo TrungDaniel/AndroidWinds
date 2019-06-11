@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.trung.androidwinds.Controller.Auth.LoginActivity;
 import com.example.trung.androidwinds.Controller.Main.Adapter.NewsAdapter;
+import com.example.trung.androidwinds.Controller.Main.Adapter.PromotionAdapter;
 import com.example.trung.androidwinds.Model.HomeData;
 import com.example.trung.androidwinds.R;
 import com.example.trung.androidwinds.Utils.AppConfig;
@@ -19,9 +19,7 @@ import com.google.gson.Gson;
 
 public class HomeActivity extends AppCompatActivity {
     TextView tvUsername, tvPhoneNumber, tvDangXuat;
-    ImageView imgCtth1, imgCtth2, imgCtth3;
-    TextView tvCtth1, tvCtth2, tvCtth3;
-    RecyclerView rvNews;
+    RecyclerView rvNews, rvPromotion;
     HomeData homeData;
 
     @Override
@@ -34,6 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         dangxuat();
         docJson();
         configRvNews();
+        configRvPromotion();
     }
 
     private void docJson() {
@@ -42,6 +41,14 @@ public class HomeActivity extends AppCompatActivity {
         homeData = gson.fromJson(strhomeData, HomeData.class);
     }
 
+    private void configRvPromotion() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        rvPromotion.setLayoutManager(linearLayoutManager);
+        PromotionAdapter promotionAdapter = new PromotionAdapter();
+        promotionAdapter.setData(homeData.getResult().getListPromotion());
+        promotionAdapter.setContext(this);
+        rvPromotion.setAdapter(promotionAdapter);
+    }
 
     private void configRvNews() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -51,7 +58,6 @@ public class HomeActivity extends AppCompatActivity {
         adapter.setContext(this);
         rvNews.setAdapter(adapter);
     }
-
 
     private void dangxuat() {
         tvDangXuat.setOnClickListener(new View.OnClickListener() {
@@ -86,11 +92,7 @@ public class HomeActivity extends AppCompatActivity {
         tvPhoneNumber = findViewById(R.id.tv_phone_number);
         tvDangXuat = findViewById(R.id.tv_dang_xuat);
         rvNews = findViewById(R.id.rv_news);
-        imgCtth1 = findViewById(R.id.img_ctth1);
-        imgCtth2 = findViewById(R.id.img_ctth2);
-        imgCtth3 = findViewById(R.id.img_ctth3);
-        tvCtth1 = findViewById(R.id.tv_ctth1);
-        tvCtth2 = findViewById(R.id.tv_ctth2);
-        tvCtth3 = findViewById(R.id.tv_ctth3);
+        rvPromotion = findViewById(R.id.rv_promotion);
+
     }
 }

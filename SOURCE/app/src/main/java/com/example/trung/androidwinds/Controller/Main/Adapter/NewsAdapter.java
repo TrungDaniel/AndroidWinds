@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder>{
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
     public List<News> data;
     public Context context;
 
@@ -28,36 +28,38 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         this.data = data;
     }
 
+
     @NonNull
     @Override
     public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.news_item_layout,viewGroup,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.news_item_layout, viewGroup, false);
         return new NewsViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, int i) {
         News news = data.get(i);
-        newsViewHolder.tvDefault.setText(news.getTitle());
-        Picasso.get().load(news.getUrlImage()).into(newsViewHolder.imgDefault);
-
+        newsViewHolder.tvNewsTitle.setText(news.getTitle());
+        Picasso.get().load(news.getUrlImage()).into(newsViewHolder.imgNews);
     }
+
 
     @Override
     public int getItemCount() {
         return data.size();
     }
 
-    public class NewsViewHolder extends RecyclerView.ViewHolder{
-        ImageView imgDefault;
-        TextView tvDefault;
-        Button btnDefault;
+    public class NewsViewHolder extends RecyclerView.ViewHolder {
+        ImageView imgNews;
+        TextView tvNewsTitle;
+        Button btnNewsChiTiet;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgDefault = itemView.findViewById(R.id.img_default);
-            tvDefault = itemView.findViewById(R.id.tv_default);
-            btnDefault = itemView.findViewById(R.id.btn_default);
+            imgNews = itemView.findViewById(R.id.img_news);
+            tvNewsTitle = itemView.findViewById(R.id.tv_news_title);
+            btnNewsChiTiet = itemView.findViewById(R.id.btn_news_chi_tiet);
+
 
         }
     }
